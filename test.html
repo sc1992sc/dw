@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>考试</title>
+    <link rel="stylesheet" href="css/test.css">
+    <script src="js/jquery-1.11.3.min.js"></script>
+</head>
+<body>
+<div class="t_header">
+    <div class="c">
+        <a href="index.html" class="logo L"></a>
+        <a href="online.html" class="R back">返回目录</a>
+        <p>AFAA考试·AFAA认证国际私人健身教练认证考试 </p>
+    </div>
+</div>
+
+<div class="main c">
+    <div class="main-head">
+        <div class="main-head-til">2016AFAA认证国际私人健身教练认证考试 </div>
+        <div class="main-head-info">
+            <span>本试卷共有<br/><i>20</i>题</span>
+            <span>卷面总分<br/><i>100</i>分</span>
+            <span>答题时间<br/><i>150</i>分钟</span>
+            <span class="last">试卷来源<br/>AFAA在线考试中心</span>
+        </div>
+    </div>
+    <div class="main-tip">
+        <h3>单项选择题</h3>
+        <p>单项选择题：每小题备选答案中，只有一个符合题意的正确答案。多选、错选、不选均不得分</p>
+    </div>
+    <div class="main-list">
+        <ul class="list_ul">
+            <li>
+                <div class="list-num">1</div>
+                <div class="list-name">下列各项业务应当征收增值税的有（）。</div>
+                <dl class="list-choice">
+                    <dd>A．水库供应农业灌溉用水</dd>
+                    <dd>B．银行销售金银</dd>
+                    <dd>C．纳税人销售货物的同时代办保险而向购买方收取的保险费</dd>
+                    <dd>D．电力公司向发电企业收取的过网费</dd>
+                </dl>
+                <div class="list-ans">
+                    <span><input type="radio" name="q1"/>A</span>
+                    <span><input type="radio"  name="q1" />B</span>
+                    <span><input type="radio"  name="q1" />C</span>
+                    <span><input type="radio"  name="q1" />D</span>
+                </div>
+            </li>
+            <li>
+                <div class="list-num">2</div>
+                <div class="list-name">下列各项业务应当征收增值税的有（）。</div>
+                <dl class="list-choice">
+                    <dd>A．水库供应农业灌溉用水</dd>
+                    <dd>B．银行销售金银</dd>
+                    <dd>C．纳税人销售货物的同时代办保险而向购买方收取的保险费</dd>
+                    <dd>D．电力公司向发电企业收取的过网费</dd>
+                </dl>
+                <div class="list-ans">
+                    <span><input type="radio" name="q1"/>A</span>
+                    <span><input type="radio"  name="q1" />B</span>
+                    <span><input type="radio"  name="q1" />C</span>
+                    <span><input type="radio"  name="q1" />D</span>
+                </div>
+            </li>
+        </ul>
+        <div class="main-foot">
+            <a href="javascript:void(0)" class="end">我要交卷</a>
+            <a href="online.html">返回目录</a>
+        </div>
+    </div>
+</div>
+<script>
+    $(".list-ans span").on("click",function(){
+        $(this).addClass("on").siblings().removeClass("on").find("input").prop("checked",false)
+        var m=$(this).find("input[type='radio']")
+        m.prop("checked",true)
+    })
+</script>
+
+
+<script src="js/map.js"></script>
+<script>window.onload=loadScript()</script>
+<div class="footer">
+    <div class="c">
+        <ul>
+            <li>
+                <img src="images/fLOGO.png" alt=""/>
+                <img src="images/fLOGO2.png" alt=""/>
+            </li>
+            <li>
+                <div id="allmap"></div>
+            </li>
+            <li>
+                <div class="ftitle">联系方式</div>
+                <p>地址：上海市杨浦区隆昌路619号城市概念一号楼C320</p>
+                <p>客服热线：021-61107878</p>
+                <p>传真：0575-88331089</p>
+                <p>邮箱：contact@afaacn.com</p>
+                <p>网址：www.afaacn.com</p>
+            </li>
+            <li class="fli">
+                <div class="ftitle">关注我们</div>
+                <img src="images/erweima.png" alt=""/>
+            </li>
+        </ul>
+        <div class="clear"></div>
+    </div>
+</div>
+<div class="bottom">Copyright 2016 上海东巍体育股份有限公司 保留所有版权 浙ICP备 第33010502001271号    技术支持：鼎商科技</div>
+<div class="quick">
+    <ul>
+        <li><samp id="time">00:00:00</samp><span>共100题</span></li>
+        <li class="end">
+            <i class="ticon t1"></i>
+            我要交卷
+        </li>
+        <li id="backup">
+            <i class="ticon t2"></i>
+            回到顶部
+        </li>
+    </ul>
+</div>
+
+<div class="layout">
+    <div class="layoutbg"></div>
+    <div class="layoutCon">
+        <div class="alerts al1">
+            <p>本次考试时间是<span>150</span>分钟，卷面总分为<span>100</span>分，您有3次答题机会，是否开始答题</p>
+            <p class="btnCtrl">
+                <a href="javascript:void(0)" class="btn-sub btn-success" id="start">确定开始</a>
+                <a href="online.html" class="btn-sub">返回目录</a>
+            </p>
+        </div>
+        <div class="alerts al2">
+            <br/>
+            <p>您确定要交卷吗？</p>
+            <p class="btnCtrl">
+                <a href="javascript:void(0)" class="btn-sub btn-success" id="end">确定交卷</a>
+                <a href="javascript:void(0)" class="btn-sub close">继续做题</a>
+            </p>
+        </div>
+        <div class="alerts al3">
+            <p>您本次考试得分是</p>
+            <p><strong><span>132</span></strong>分</p>
+            <p class="btnCtrl">
+                <a href="javascript:void(0)" class="btn-sub close">确定</a>
+            </p>
+        </div>
+        <div id="close" class="close">×</div>
+    </div>
+</div>
+
+<script>
+    $("#backup").on("click",function(){
+        Srcoll(0);return false;
+    });
+    function Srcoll(st){
+        $("html,body").animate({scrollTop: st + "px"},"slow");
+    }
+    $(document).ready(function(){
+        $(".layout").css("display","block").find(".al1").css("display","block").siblings("alerts").css("display","none")
+    })
+    //开始答题
+    $("#start").click(function(){
+        $(".layout").css("display","none").find(".al1").css("display","none")
+        var t1=0,t2=0,t3=0;
+        setInterval(function(){
+            t1++;
+            if(t1>60){
+                t1=0;
+                t2++;
+                if(t2>60){
+                    t2=0;
+                    t3++;
+                }
+            }
+            var t11=t1>9?t1:"0"+t1;
+            var t22=t2>9?t2:"0"+t2;
+            var t33=t3>9?t3:"0"+t3;
+            $("#time").html(t33+":"+t22+":"+t11)
+        },1000)
+    })
+    $(".end").click(function(){
+        $(".layout").css("display","block").find(".al2").css("display","block").siblings("alerts").css("display","none")
+    })
+    $("#end").click(function(){
+       $(".alerts").css("display","none");
+        $(".al3").css("display","block")
+    })
+    $(".close").click(function(){
+        $(".layout").css("display","none").find(".alerts").css("display","none")
+    })
+</script>
+</body>
+</html>
